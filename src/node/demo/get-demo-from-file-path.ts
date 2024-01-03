@@ -79,6 +79,10 @@ function getDemoSource(demoHeader: DemoHeader, demoName: string): DemoSource {
     return DemoSource.PerfectWorld;
   }
 
+  if (serverName.includes('csc')) {
+    return DemoSource.csc;
+  }
+
   return DemoSource.Unknown;
 }
 

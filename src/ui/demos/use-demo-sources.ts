@@ -91,6 +91,13 @@ export function useGetDemoSourceName() {
             message: 'Valve',
           }),
         );
+      case DemoSource.csc:
+        return _(
+          msg({
+            context: 'Demo source name',
+            message: 'CSC',
+          }),
+        );
       default:
         return _(
           msg({
@@ -153,6 +160,10 @@ export function useDemoSources() {
     {
       value: DemoSource.PerfectWorld,
       name: getDemoSourceName(DemoSource.PerfectWorld),
+    },
+    {
+      value: DemoSource.csc,
+      name: getDemoSourceName(DemoSource.csc),
     },
     {
       value: DemoSource.Unknown,
